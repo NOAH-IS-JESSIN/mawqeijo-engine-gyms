@@ -93,7 +93,32 @@ const GYM_DATA = {
     }
   },
 
-  default: { theme: { primary: '#111', accent: '#39FF14' }, content: { en: { name: "IRON X" }, ar: { name: "IRON X" } } }
+ // Fallback (The Fix)
+  default: { 
+    theme: { primary: '#111', accent: '#ffffff' }, 
+    content: {
+      en: {
+        name: "MAWQEIJO ENGINE",
+        tagline: "SYSTEM READY.",
+        sub: "Select a client to view the template.",
+        location: "System Status: Online",
+        cta: "Initiate",
+        disciplines: [], // Empty array prevents the crash
+        marquee: "WAITING FOR INPUT // SELECT GYM KEY //"
+      },
+      ar: {
+        name: "محرك موقعجو",
+        tagline: "النظام جاهز",
+        sub: "اختر عميلاً لعرض النموذج.",
+        location: "حالة النظام: متصل",
+        cta: "ابدأ",
+        disciplines: [],
+        marquee: "بانتظار الإدخال // اختر النادي //"
+      },
+      LogoComponent: () => <div className="text-4xl font-black">M</div>,
+      heroImg: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80"
+    } 
+  }
 };
 
 const Marquee = ({ text, color }) => (
